@@ -1,0 +1,16 @@
+static int[] breakingRecords(int[] scores) {
+        int max, min;
+        max = min = scores[0];
+        int maxCount = 0;
+        int minCount = 0;
+        for(int i=1;i<scores.length;i++){
+            if(scores[i]>max){
+                max = scores[i];
+                maxCount++;
+            }else if(scores[i]<min){
+                min = scores[i];
+                minCount++;
+            }
+        }
+        return new int[]{maxCount,minCount};
+    }
